@@ -1,3 +1,3 @@
-1.) npm i -D typescript
+<pre><code>npm i -D typescript</code></pre><br>
+<pre><code>tsc --init</code></pre>
 
-2.) tsc --init
