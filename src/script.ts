@@ -5,7 +5,7 @@ class today{
     month:number;
     year:number;
 
-   constructor(date:Date){
+    public constructor(date:Date){
 
     this.date = date;
     this.day = this.date.getDate();
@@ -17,9 +17,16 @@ class today{
 
 const Today = new today(new Date());
 
-console.log(`${Today.day}/${Today.month}/${Today.year} `);
-// console.log(`วันนี้วันที่ ${Today.day} เดือน ${Today.month} ปี ${Today.year} `);
+async function Execute(){
+    return `${Today.day}/${Today.month}/${Today.year} `
+    throw 'Error'
+    // const process = Promise.resolve(`${Today.day}/${Today.month}/${Today.year}`)
+    // console.log(await process);
+};
 
+Execute().then((resolve)=> console.log(resolve))
+.catch((reason)=> console.log(reason))
+.finally(()=> console.log('Done!'));
 
 // ===========> javascrit อันเก่า
 /*
